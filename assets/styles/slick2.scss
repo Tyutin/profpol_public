@@ -1,0 +1,70 @@
+.slick-arrow {
+  top: calc(100% + 60px);
+  width: 40px;
+  height: 40px;
+  background-color: $WHITE;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50%;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+    background-image: url('/img/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.slick-next,
+.slick-prev {
+  &:focus,
+  &:hover {
+    background-color: $WHITE;
+  }
+}
+.slick-next,
+.slick-prev {
+  &:active {
+    background-color: $COLOR_GRAY_BASIC;
+  }
+}
+
+.slick-next {
+  right: calc(50% - 60px);
+}
+
+.slick-prev {
+  left: calc(50% - 60px);
+
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $COLOR_BLUE_H1;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 0.25;
+}
+
+.slick-slide {
+  padding: 0 20px;
+}
+
+.slick-works__image {
+  cursor: pointer;
+}
+
+// .slick-dots {
+//   bottom: unset;
+//   top: calc(100% + 20px);
+// }
